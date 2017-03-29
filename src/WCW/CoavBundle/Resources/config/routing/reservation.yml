@@ -8,5 +8,17 @@ reservation_show:
     defaults: { _controller: "WCWCoavBundle:Reservation:show" }
     methods:  GET
 
+reservation_new:
+    path:     /new
+    defaults: { _controller: "WCWCoavBundle:Reservation:new" }
+    methods:  [GET, POST]
 
+reservation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCWCoavBundle:Reservation:edit" }
+    methods:  [GET, POST]
 
+reservation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCWCoavBundle:Reservation:delete" }
+    methods:  DELETE

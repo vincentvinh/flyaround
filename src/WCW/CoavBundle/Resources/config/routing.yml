@@ -6,6 +6,10 @@ wcw_coav_homepage:
     path:     /
     defaults: { _controller: WCWCoavBundle:Default:index }
 
+wcw_coav_terrain:
+    resource: "@WCWCoavBundle/Resources/config/routing/terrain.yml"
+    prefix:   /terrain
+
 wcw_coav_flight:
     resource: "@WCWCoavBundle/Resources/config/routing/flight.yml"
     prefix:   /flight
@@ -14,8 +18,5 @@ wcw_coav_reservation:
     resource: "@WCWCoavBundle/Resources/config/routing/reservation.yml"
     prefix:   /reservation
 
-wcw_coav_terrain:
-    resource: "@WCWCoavBundle/Resources/config/routing/terrain.yml"
-    prefix:   /terrain
 
 

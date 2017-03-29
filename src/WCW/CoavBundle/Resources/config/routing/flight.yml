@@ -8,5 +8,17 @@ flight_show:
     defaults: { _controller: "WCWCoavBundle:Flight:show" }
     methods:  GET
 
+flight_new:
+    path:     /new
+    defaults: { _controller: "WCWCoavBundle:Flight:new" }
+    methods:  [GET, POST]
 
+flight_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCWCoavBundle:Flight:edit" }
+    methods:  [GET, POST]
 
+flight_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCWCoavBundle:Flight:delete" }
+    methods:  DELETE
