@@ -1,0 +1,28 @@
+WCW\CoavBundle\Entity\PlanelModel:
+    type: entity
+    table: null
+    repositoryClass: WCW\CoavBundle\Repository\PlanelModelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        model:
+            type: string
+            length: 255
+        manufacturer:
+            type: string
+            length: 255
+            nullable: true
+        cruiseSpeed:
+            type: integer
+            nullable: true
+        nbSeats:
+            type: integer
+            nullable: true
+        status:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

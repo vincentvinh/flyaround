@@ -1,0 +1,24 @@
+planelmodel_index:
+    path:     /
+    defaults: { _controller: "WCWCoavBundle:PlanelModel:index" }
+    methods:  GET
+
+planelmodel_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCWCoavBundle:PlanelModel:show" }
+    methods:  GET
+
+planelmodel_new:
+    path:     /new
+    defaults: { _controller: "WCWCoavBundle:PlanelModel:new" }
+    methods:  [GET, POST]
+
+planelmodel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCWCoavBundle:PlanelModel:edit" }
+    methods:  [GET, POST]
+
+planelmodel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCWCoavBundle:PlanelModel:delete" }
+    methods:  DELETE

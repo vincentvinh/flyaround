@@ -1,3 +1,5 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+wcw_coav:
+    resource: "@WCWCoavBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

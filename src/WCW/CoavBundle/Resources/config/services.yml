@@ -1,0 +1,4 @@
+services:
+#    wcw_coav.example:
+#        class: WCW\CoavBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,12 @@
+flight_index:
+    path:     /
+    defaults: { _controller: "WCWCoavBundle:Flight:index" }
+    methods:  GET
+
+flight_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCWCoavBundle:Flight:show" }
+    methods:  GET
+
+
+

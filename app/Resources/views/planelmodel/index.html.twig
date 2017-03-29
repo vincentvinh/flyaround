@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Planelmodels list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Manufacturer</th>
+                <th>Cruisespeed</th>
+                <th>Nbseats</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for planelModel in planelModels %}
+            <tr>
+                <td><a href="{{ path('planelmodel_show', { 'id': planelModel.id }) }}">{{ planelModel.id }}</a></td>
+                <td>{{ planelModel.model }}</td>
+                <td>{{ planelModel.manufacturer }}</td>
+                <td>{{ planelModel.cruiseSpeed }}</td>
+                <td>{{ planelModel.nbSeats }}</td>
+                <td>{{ planelModel.status }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('planelmodel_show', { 'id': planelModel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('planelmodel_edit', { 'id': planelModel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('planelmodel_new') }}">Create a new planelModel</a>
+        </li>
+    </ul>
+{% endblock %}
