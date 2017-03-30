@@ -9,12 +9,6 @@ WCW\CoavBundle\Entity\Flight:
             generator:
                 strategy: AUTO
     fields:
-        departure:
-            type: string
-            length: '4'
-        arrival:
-            type: string
-            length: '4'
         pilot:
             type: string
             length: 255
@@ -24,3 +18,18 @@ WCW\CoavBundle\Entity\Flight:
         takeofTime:
             type: datetime
     lifecycleCallbacks: {  }
+
+    manyToOne:
+        departure:
+            targetEntity: WCW\CoavBundle\Entity\Terrain
+            inversedBy: departures
+        arrival:
+            targetEntity: WCW\CoavBundle\Entity\Terrain
+            inversedBy: arrivals
+        plane:
+            targetEntity: WCW\CoavBundle\Entity\PlanelModel
+            inversedBy: planes
+    oneToMany:
+        reservations:
+            targetEntity: WCW\CoavBundle\Entity\Reservation
+            mappedBy: reservation

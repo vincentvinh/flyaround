@@ -26,3 +26,11 @@ WCW\CoavBundle\Entity\Terrain:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+    oneToMany:
+        departures:
+            targetEntity: WCW\CoavBundle\Entity\Flight
+            mappedBy: departure
+        arrivals:
+            targetEntity: WCW\CoavBundle\Entity\Flight
+            mappedBy: arrival

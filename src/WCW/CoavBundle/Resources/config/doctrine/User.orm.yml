@@ -1,0 +1,20 @@
+# src/WCS/CoavBundle/Resources/config/doctrine/User.orm.yml
+
+WCW\CoavBundle\Entity\User:
+    type: entity
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+
+    manyToMany:
+        reservations:
+            targetEntity: WCW\CoavBundle\Entity\Reservation
+            inversedBy: passengers
